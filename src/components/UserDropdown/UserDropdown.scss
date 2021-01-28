@@ -1,0 +1,19 @@
+.user-dropdown-toggle {
+	display: flex;
+  align-items: center;
+	
+	.user-avatar {
+		width: 36px;
+		height: 36px;
+		background-color: #D8D8D8;
+		border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+	}
+
+  .chevron-icon {
+    font-size: 0.8rem;
+  }
+}

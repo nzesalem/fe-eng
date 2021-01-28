@@ -1,0 +1,127 @@
+.users-table {
+  flex-grow: 1;
+  background: #ffffff;
+  box-shadow: 0px 4px 30px rgba(192, 192, 192, 0.25);
+  border-radius: 6px;
+
+  .check-col {
+    width: 55px;
+
+    .custom-control-input {
+      width: 2rem;
+    }
+
+    .custom-control-label::before {
+      border-width: 2px;
+      left: -0.7rem;
+    }
+    .custom-control-label::after {
+      left: -0.7rem;
+    }
+  }
+
+  thead {
+    background-color: #F3F6F9;
+
+    th {
+      border-bottom: 0;
+      border-top: 0;
+      font-size: 12px;
+      color: #899198;
+      line-height: 15px;
+      text-transform: uppercase;
+    }
+  }
+
+  tbody {
+    tr {
+      font-size: 13px;
+      line-height: 17px;
+
+      &:first-child {
+        td {
+          border-top: 0;
+        }
+      }
+
+      .chevron-col {
+        width: 55px;
+
+        .icon {
+          cursor: pointer;
+        }
+      }
+
+      .name-col {
+        min-width: 120px;
+        font-size: 14px;
+        line-height: 18px;
+        color: #25213B;
+      }
+      .state-address-col {
+        min-width: 150px;
+
+        .table-entry-state {
+          font-weight: 600;
+          color: #25213B;
+          margin-bottom: 3px;
+        }
+        .table-entry-address {
+          color: #878592;
+        }
+      }
+      .issue-col {
+        min-width: 150px;
+
+        .issues-label {
+          margin-top: 5px;
+          display: inline-block;
+          padding: 2px 15px;
+          border-radius: 11px;
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 18px;
+
+          &.no-issues {
+            background: #F6F3FF;
+            color: #8C70FF;
+          }
+
+          &.some-issues {
+            background: #FFF6DE;
+            color: #F4B400;
+          }
+        }
+      }
+      .unique-entry-col {
+        min-width: 150px;
+
+        .table-unique-entry {
+          font-weight: bold;
+          color: #25213B;
+          position: relative;
+          padding-left: 12px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            margin-top: 5px;
+            width: 6px;
+            height: 6px;
+            background: #25213B;
+            border-radius: 50%;
+          }
+        }
+        .table-entry-tag {
+          color: #878592;
+          margin-top: 3px;
+        }
+      }
+      .risk-col {
+        min-width: 110px;
+      }
+      .menu-col {}
+    }
+  }
+}

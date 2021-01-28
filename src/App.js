@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import Container from 'react-bootstrap/Container';
+
+import MetricsSection from './components/MetricsSection';
+import Navbar from './components/Navbar';
+import DivisionSummary from './components/DivisionSummary';
+import ModuleHistory from './components/ModuleHistory';
+import UsersTable from './components/UsersTable';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar bg="white" expand="lg" />
+
+      <div className="custom-breadcrumb">
+        <Container>
+          <ul className="breadcrumb-list">
+            <li><a href="#divisions">Divisions</a></li>
+            <li><a href="#modules">Modules</a></li>
+          </ul>
+        </Container>
+      </div>
+
+      <MetricsSection />
+
+      <section className="main-section">
+        <Container>
+          <div className="main-row">
+            <div className="sidebar">
+              <DivisionSummary />
+            
+              <ModuleHistory />
+            </div>
+
+            <div className="main">
+              <UsersTable />
+            </div>
+          </div>
+        </Container>
+      </section>
     </div>
   );
 }

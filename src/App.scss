@@ -1,0 +1,104 @@
+@import "./assets/scss/variables";
+
+.App {
+  min-height: 100vh;
+
+  .custom-breadcrumb {
+    margin-top: 15px;
+
+    .breadcrumb-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+
+      li {
+        margin-right: 20px;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: -18px;
+          top: 5px;
+          height: 15px;
+          width: 15px;
+          background-image: url('./assets/icons/chevron-right.svg');
+          background-size: contain;
+        }
+
+        a {
+          font-size: 14px;
+          line-height: 22px;
+          color: #778699;
+        }
+
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .main-section {
+    margin-top: 30px;
+
+    .main-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sidebar {
+      width: 258px;
+      margin-right: 30px;
+    }
+
+    .main {
+      flex-grow: 1;
+    }
+
+    @media (max-width: 1280px) {
+      .main-row {
+        flex-wrap: wrap;
+      }
+
+      .sidebar {
+        width: 100%;
+        display: flex;
+        margin-right: 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        order: 2;
+
+        .division-summary {
+          width: 49%;
+          margin-right: 30px;
+        }
+        .module-history {
+          width: 49%;
+        }
+      }
+
+      .main {
+        width: 100%;
+        order: 1;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .sidebar {
+        flex-direction: column;
+
+        .division-summary {
+          width: 100%;
+        }
+        .module-history {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

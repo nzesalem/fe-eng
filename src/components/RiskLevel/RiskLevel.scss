@@ -1,0 +1,25 @@
+.risk-level {
+	font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+
+  .risk-icon {
+    margin-right: 10px;
+  }
+
+  &.low {
+    color: #3AB65C;
+
+    .risk-icon {
+      font-size: 0.7rem;
+    }
+  }
+  &.mid {
+    color: #3C3AB6;
+  }
+  &.high {
+    color: #B63A3A;
+  }
+}
