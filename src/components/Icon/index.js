@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import './Icon.scss';
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -13,7 +15,8 @@ const Icon = ({ name, className, ...rest }) => {
       try {
         ImportedIconRef.current = (await import(`!!@svgr/webpack?-svgo,+titleProp,+ref!../../assets/icons/${name}.svg`)).default;
       } catch (err) {
-        throw err;
+        // throw err;
+        console.warn(`Icon ${name}.svg does not exist`)
       } finally {
         setLoading(false);
       }
@@ -35,6 +38,11 @@ const Icon = ({ name, className, ...rest }) => {
   }
 
   return null;
+};
+
+
+Icon.propTypes = {
+  name: PropTypes.string.isRequired
 };
 
 export default Icon;

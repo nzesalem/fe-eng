@@ -1,5 +1,7 @@
 import './RiskLevel.scss';
 
+import PropTypes from 'prop-types';
+
 import Icon from '../Icon';
 
 import classnames from 'classnames';
@@ -22,5 +24,9 @@ function RiskLevel(props) {
     </div>
   );
 }
+
+RiskLevel.propTypes = {
+  risk: PropTypes.oneOf(['low', 'mid', 'high'])
+};
 
 export default RiskLevel;

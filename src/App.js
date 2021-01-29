@@ -11,7 +11,7 @@ import UsersTable from './components/UsersTable';
 function App() {
   return (
     <div className="App">
-      <Navbar bg="white" expand="lg" />
+      <Navbar />
 
       <div className="custom-breadcrumb">
         <Container>
